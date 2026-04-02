@@ -1,0 +1,18 @@
+{
+  "Try-Except Block": {
+    "prefix": "tryexcept",
+    "body": [
+      "try:",
+      "    $1",
+      "except Exception as e:",
+      "    print(f\"An error occurred: {e}\")",
+      "$0"
+    ],
+    "description": "try-except block"
+  },
+  "Print Debug Log": {
+    "prefix": "dbgprint",
+    "body": ["print(\"\\n[DEBUG]:\", $1, \"\\n\")"],
+    "description": "Debug log"
+  }
+}
