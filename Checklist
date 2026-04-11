@@ -1,0 +1,33 @@
+[ ] Authentication Agent (Polkit): Install hyprpolkitagent or polkit-gnome. Without this, GUI applications requiring root (like partition managers or certain installers) will simply fail to launch.
+
+[ ] Wallpaper Manager: Install hyprpaper or swww. Hyprland doesn't draw wallpapers by default; you need a daemon to handle it.
+
+[ ] Audio & Media Control: Install wireplumber, pavucontrol (GUI volume mixer), and playerctl. Map your keyboard's media keys to volume up/down/mute in hyprland.conf.
+
+[ ] Brightness Control: Install brightnessctl. Map your keyboard's brightness keys to adjust screen backlighting.
+
+[ ] Network & Bluetooth Applets: Install nm-applet and blueman. You will need these to manage connections from your topbar's system tray.
+
+[ ] Terminal: Install Ghostty. Set it as your default terminal by binding $terminal = ghostty in your hyprland.conf.
+
+[ ] Application Finder: Install rofi-wayland (or wofi). Map it to SUPER + Space or your preferred key to search and launch applications.
+
+[ ] File Manager: You can keep GNOME's nautilus if you like the familiarity, but many Wayland users prefer thunar. For a highly efficient terminal-based option, install yazi and launch it inside Ghostty.
+
+[ ] System Monitor: Install btop. To make it easily accessible, create a keybind in Hyprland that specifically opens a new Ghostty window running btop (e.g., bind = $mainMod, Escape, exec, ghostty -e btop).
+
+[ ] Shortcuts Finder: Install wev to identify key names for your config. For a shortcut cheat sheet, write a small shell script that uses grep to read your hyprland.conf and pipe the keybinds into rofi-wayland for a quick searchable list.
+
+[ ] Topbar & System Usage: Install waybar. It is the gold standard for Hyprland. You will need to edit its config and style.css files to add and style the CPU, Memory, and Temperature modules.
+
+[ ] Clipboard Manager: Install wl-clipboard (the backend) and cliphist (the history daemon). You can integrate cliphist with rofi-wayland to pop up a searchable history of your copied items.
+
+[ ] Screenshots: Install grim (takes the screenshot) and slurp (lets you select the region). For an experience closer to GNOME's screenshot tool, add swappy to automatically open the screenshot for quick editing and annotation.
+
+[ ] Notifications (Missing Essential): Install swaync (SwayNotificationCenter). It provides a drop-down notification center and quick-settings panel that feels very similar to GNOME's top-right menu.
+
+[ ] Lockscreen: Install hyprlock. It is built by the Hyprland team and offers deep customization for your lock screen appearance.
+
+[ ] Idle Management: Install hypridle. Configure it to dim your screen after 5 minutes, trigger hyprlock after 10 minutes, and suspend the system after 15 minutes.
+
+[ ] Power Menu: Install wlogout. Bind this to a shortcut or a button in Waybar to bring up a clean, full-screen menu with options to Shutdown, Reboot, Suspend, or Logout.
