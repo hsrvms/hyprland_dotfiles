@@ -39,6 +39,17 @@ PACKAGES=(
     rofi-wayland
     thunar
     yazi
+    ffmpegthumbnailer
+    p7zip
+    jq
+    poppler
+    fd
+    ripgrep
+    fzf
+    zoxide
+    imagemagick
+    mpv
+    imv
     btop
     wev
     
@@ -63,12 +74,17 @@ PACKAGES=(
     papirus-icon-theme
 )
 
-# 4. Execute the installation
+# Execute the installation
 echo "Installing packages..."
 yay -S --needed --noconfirm "${PACKAGES[@]}"
 
-# 5. Post-Installation Configuration for Kmonad
+ya pkg add yazi-rs/flavors:catppuccin-mocha  
+# Set imv for images
+xdg-mime default imv.desktop image/jpeg image/png image/gif image/webp image/svg+xml
+# Set mpv for videos
+xdg-mime default mpv.desktop video/mp4 video/x-matroska video/webm
 
+# Post-Installation Configuration for Kmonad
 echo "Setting up KMonad system permissions..."
 # Add your user to the input group
 sudo usermod -aG input $USER
@@ -87,20 +103,24 @@ EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-ln -sf ~/dotfiles/hypr ~/.config/hypr
-ln -sf ~/dotfiles/waybar ~/.config/waybar
-ln -sf ~/dotfiles/rofi ~/.config/rofi
-ln -sf ~/dotfiles/kmonad ~/.config/kmonad
-ln -sf ~/dotfiles/zed ~/.config/zed 
-ln -sf ~/dotfiles/helix ~/.config/helix
-ln -sf ~/dotfiles/kitty ~/.config/kitty
-ln -sf ~/dotfiles/ghostty ~/.config/ghostty
-ln -sf ~/dotfiles/wlogout ~/.config/wlogout
-ln -sf ~/dotfiles/warp-terminal ~/.config/warp-terminal
+ln -sf ~/dotfiles/btop ~/.config/btop
+ln -sf ~/dotfiles/cliphist ~/.config/cliphist
+ln -sf ~/dotfiles/fastfetch ~/.config/fastfetch
 ln -sf ~/dotfiles/fish ~/.config/fish
-ln -sf ~/dotfiles/btop/ ~/.config/btop
+ln -sf ~/dotfiles/ghostty ~/.config/ghostty
+ln -sf ~/dotfiles/helix ~/.config/helix
+ln -sf ~/dotfiles/hypr ~/.config/hypr
+ln -sf ~/dotfiles/kitty ~/.config/kitty
+ln -sf ~/dotfiles/kmonad ~/.config/kmonad
+ln -sf ~/dotfiles/rofi ~/.config/rofi
 sudo ln -sf ~/dotfiles/sddm.conf.d ~/.config/sddm.conf.d
+ln -sf ~/dotfiles/swaync ~/.config/swaync
+ln -sf ~/dotfiles/warp-terminal ~/.config/warp-terminal
+ln -sf ~/dotfiles/waybar ~/.config/waybar
+ln -sf ~/dotfiles/wlogout ~/.config/wlogout
 sudo ln -sf ~/dotfiles/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+ln -sf ~/dotfiles/yazi ~/.config/yazi
+ln -sf ~/dotfiles/zed ~/.config/zed 
 
 gsettings set org.gnome.desktop.interface cursor-theme 'catppuccin-mocha-blue-cursors'
 
