@@ -1,3 +1,9 @@
 
 inherits = "catppuccin_mocha"
 "ui.background" = {}
+
+"ui.menu" = { bg = "none" }
+"ui.popup" = { bg = "none" }
+
+"ui.menu.selected" = { modifiers = ["reversed"] }
+"ui.popup.info" = { bg = "none", fg = "text" }

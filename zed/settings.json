@@ -1,219 +1,324 @@
 {
-    "which_key": {
-        "enabled": true,
+  "helix_mode": true,
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 0,
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha (Blur) [Light]",
+  },
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Macchiato",
+    "dark": "Warm Charmed Icons",
+  },
+  "theme_overrides": {
+    "Aura Dark": {
+      "border.variant": "#15141C",
+      "border": "#15141C",
+      "title_bar.background": "#15141C",
+      "panel.background": "#15141C",
+      "panel.focused_border": "#4E466E",
+      "players": [
+        {
+          "cursor": "BD9DFF",
+        },
+      ],
+      "syntax": {
+        "comment": {
+          "font_style": "italic",
+        },
+        "comment.doc": {
+          "font_style": "italic",
+        },
+      },
     },
-    "ui_font_family": ".ZedSans",
-    "agent_buffer_font_size": 14.0,
-    "agent_ui_font_size": 15.0,
-    "ui_font_size": 15.0,
-    "ssh_connections": [
-        {
-            "host": "192.168.0.142",
-            "username": "erp",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/home/erp/Masaüstü/frappe-bench"],
-                },
-                {
-                    "paths": ["/home/erp/Masaüstü/frappe-bench-dev"],
-                },
-            ],
-        },
-        {
-            "host": "192.168.0.142",
-            "username": "erp",
-            "args": [],
-            "projects": [],
-        },
-        {
-            "host": "192.168.0.142",
-            "username": "erp",
-            "args": [],
-            "projects": [],
-        },
-        {
-            "host": "72.60.83.1",
-            "username": "root",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/root"],
-                },
-            ],
-        },
-        {
-            "host": "72.60.83.1",
-            "username": "root",
-            "args": ["-i", "~/.ssh/id_ed25519"],
-            "projects": [],
-        },
-    ],
-    "edit_predictions": {
-        "provider": "zed",
-        "disabled_globs": [".env", "ozerpan_ercom_sync/api.py"],
-    },
-    "show_edit_predictions": false,
-    "agent": {
-        "default_profile": "ask",
-        "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-5",
-        },
-    },
-    "theme": "Catppuccin Mocha",
-    "icon_theme": "Catppuccin Mocha",
-    "vim_mode": true,
-    "buffer_font_family": "IosevkaTerm Nerd Font Mono",
-    "buffer_font_size": 15,
-    "vertical_scroll_margin": 10,
-    "base_keymap": "VSCode",
-    "relative_line_numbers": "enabled",
-    "cursor_blink": false,
+  },
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_user_menu": false,
+  },
+  "tab_bar": {
+    // "show": false,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "status_bar": {
+    "experimental.show": false,
+  },
+  "project_panel": {
+    "hide_gitignore": true,
+    "dock": "right",
+    "default_width": 400,
+    "hide_root": true,
+    "auto_fold_dirs": true,
+    "git_status": true,
+    "sticky_scroll": false,
+    "entry_spacing": "standard",
+    "drag_and_drop": false,
+    "starts_open": true,
     "scrollbar": {
-        "show": "never",
-    },
-    "tab_size": 4,
-    "hard_tabs": false,
-    "tab_bar": {
-        "show": true,
-        "show_nav_history_buttons": false,
-    },
-    "centered_layout": {
-        "left_padding": 0.2,
-        "right_padding": 0.2,
+      "show": "never",
     },
     "indent_guides": {
-        "enabled": true,
-        "active_line_width": 1,
-        "line_width": 1,
+      "show": "never",
     },
-
-    "soft_wrap": null,
-    "preferred_line_length": 160,
-    "tabs": {
-        "git_status": true,
-        "file_icons": true,
+  },
+  "outline_panel": {
+    "default_width": 300,
+    "indent_guides": {
+      "show": "never",
     },
-    "buffer_line_height": {
-        "custom": 1.4,
+  },
+  "file_finder": {
+    "modal_max_width": "medium",
+    "include_channels": true,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "gutter": {
+    "min_line_number_digits": 0,
+    "folds": false,
+    "runnables": false,
+  },
+  "indent_guides": {
+    "enabled": false,
+    "coloring": "fixed",
+    "active_line_width": 1,
+    "line_width": 1,
+    "background_coloring": "disabled",
+  },
+  "ui_font_family": "IosevkaTerm Nerd Font Mono",
+  "ui_font_size": 15,
+  "buffer_font_family": "IosevkaTerm Nerd Font Mono",
+  "buffer_font_size": 16,
+  "buffer_line_height": {
+    "custom": 1.4,
+  },
+  "buffer_font_features": {
+    "calt": false,
+  },
+  "buffer_font_weight": 300,
+  "agent_ui_font_size": 15,
+  "agent_buffer_font_size": 15,
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "cursor_blink": false,
+  "selection_highlight": true,
+  "drag_and_drop_selection": {
+    "enabled": false,
+  },
+  "seed_search_query_from_cursor": "selection",
+  "current_line_highlight": "none",
+  "show_whitespaces": "selection",
+  "tab_size": 4,
+  "auto_indent": "syntax_aware",
+  "auto_indent_on_paste": false,
+  "format_on_save": "off",
+  "auto_install_extensions": {
+    "html": true,
+  },
+  "show_completions_on_input": false,
+  "inline_code_actions": false,
+  // "autosave": {
+  //     "after_delay": {
+  //         "milliseconds": 1000,
+  //     },
+  // },
+  "auto_update": false,
+  "extend_comment_on_newline": false,
+  "vertical_scroll_margin": 8,
+  "horizontal_scroll_margin": 10,
+  "relative_line_numbers": "enabled",
+  "when_closing_with_no_tabs": "keep_window_open",
+  "close_on_file_delete": true,
+  "restore_on_file_reopen": false,
+  "restore_on_startup": "launchpad",
+  "git": {
+    "git_gutter": "tracked_files",
+    "hunk_style": "unstaged_hollow",
+    "inline_blame": {
+      "min_column": 80,
     },
-
-    "buffer_font_features": { "calt": false },
-    "buffer_font_weight": 300,
-    "toolbar": {
-        "breadcrumbs": true,
-        "quick_actions": false,
-    },
-    "current_line_highlight": "none",
-    "terminal": {
-        "font_family": "IosevkaTerm Nerd Font Mono",
-        "font_size": 14,
-        "line_height": {
-            "custom": 1.4,
+  },
+  "centered_layout": {
+    "left_padding": 0.2,
+    "right_padding": 0.2,
+  },
+  "ssh_connections": [
+    {
+      "host": "cs.glorious-guide-w5jgp94qwr93x94.main",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/codespace"
+          ],
         },
-        "detect_venv": {
-            "on": {
-                "directories": [".env", "env", ".venv", "venv"],
-                "activate_script": "default",
-            },
+        {
+          "paths": [
+            "/workspaces/cargo-app"
+          ],
         },
+      ],
     },
-    "vim": {
-        // "always": use system clipboard when no register is specified
-        // "never": don't use system clipboard unless "+ or "* is specified
-        // "on_yank": use system clipboard for yank operations when no register is specified
-        "use_system_clipboard": "always",
-        // Lets `f` and `t` motions extend across multiple lines
+    {
+      "host": "cs.legendary-acorn-954jrqxr7xgcpwqg.main",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/workspaces/cargo_app"
+          ],
+        },
+      ],
     },
-    "project_panel": {
-        "auto_fold_dirs": false,
-        "entry_spacing": "standard",
+    {
+      "host": "cs.legendary-acorn-954jrqxr7xgcpwqg.main",
+      "args": [],
+      "projects": [],
     },
-    "format_on_save": "off",
-    "languages": {
-        "C": {
-            "format_on_save": "off",
+  ],
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "enable_thinking": true,
+      "provider": "openrouter",
+      "model": "google/gemini-3-flash-preview",
+    },
+  },
+  "base_keymap": "VSCode",
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 150,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors",
+  },
+  "terminal": {
+    "font_family": "IosevkaTerm Nerd Font Mono",
+    "font_size": 16,
+    "font_weight": 300,
+    "line_height": {
+      "custom": 1.4,
+    },
+    "blinking": "off",
+  },
+  "vim_mode": false,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true,
+  },
+  "languages": {
+    "C": {
+      "format_on_save": "off",
+    },
+    "CSharp": {
+      "format_on_save": "on",
+    },
+    "JavaScript": {
+      "format_on_save": "off",
+    },
+    "Python": {
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ],
+      "format_on_save": "off",
+      "formatter": [
+        {
+          "code_action": "source.organizeImports.ruff",
         },
-        "CSharp": {
-            "format_on_save": "on",
+        {
+          "code_action": "source.fixAll.ruff",
         },
-        "JavaScript": {
-            "format_on_save": "off",
+        {
+          "language_server": {
+            "name": "ruff",
+          },
         },
-        "Python": {
-            "language_servers": ["pyright", "ruff"],
-            "format_on_save": "off",
-            "formatter": [
-                {
-                    "code_action": "source.organizeImports.ruff",
-                },
-                {
-                    "code_action": "source.fixAll.ruff",
-                },
-                {
-                    "language_server": {
-                        "name": "ruff",
-                    },
-                },
+      ],
+    },
+    "Go": {
+      "format_on_save": "on",
+    },
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true,
+        },
+      },
+    },
+    "omnisharp": {
+      "binary": {
+        "path": "/path/to/OmniSharp",
+        "arguments": [
+          "optional",
+          "additional",
+          "args",
+          "-lsp"
+        ],
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": [
+          "cva",
+          "cx"
+        ],
+        "experimental": {
+          "classRegex": [
+            "[cls|className]\\s\\:\\=\\s\"([^\"]*)"
+          ],
+        },
+      },
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          // Ruff server settings goes here
+          "lineLength": 90,
+          "lint": {
+            "extendSelect": [
+              "I"
             ],
+          },
         },
-        "Go": {
-            "format_on_save": "on",
-        },
+      },
     },
-    "lsp": {
-        "gopls": {
-            "initialization_options": {
-                "hints": {
-                    "assignVariableTypes": true,
-                    "compositeLiteralFields": true,
-                    "compositeLiteralTypes": true,
-                    "constantValues": true,
-                    "functionTypeParameters": true,
-                    "parameterNames": true,
-                    "rangeVariableTypes": true,
-                },
-            },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "off",
         },
-        "omnisharp": {
-            "binary": {
-                "path": "/path/to/OmniSharp",
-                "arguments": ["optional", "additional", "args", "-lsp"],
-            },
+        "python": {
+          // "pythonPath": ".venv/bin/python",
+          "venvPath": ".",
+          // "venv": ".venv",
+          "venv": "env",
         },
-        "tailwindcss-language-server": {
-            "settings": {
-                "classFunctions": ["cva", "cx"],
-                "experimental": {
-                    "classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"],
-                },
-            },
-        },
-        "ruff": {
-            "initialization_options": {
-                "settings": {
-                    // Ruff server settings goes here
-                    "lineLength": 90,
-                    "lint": {
-                        "extendSelect": ["I"],
-                    },
-                },
-            },
-        },
-        "pyright": {
-            "settings": {
-                "python.analysis": {
-                    "diagnosticMode": "workspace",
-                    "typeCheckingMode": "off",
-                },
-                "python": {
-                    // "pythonPath": ".venv/bin/python",
-                    "venvPath": ".",
-                    // "venv": ".venv",
-                    "venv": "env",
-                },
-            },
-        },
+      },
     },
+  },
 }
