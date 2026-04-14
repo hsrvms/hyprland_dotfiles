@@ -32,6 +32,8 @@
       "space s g": "pane::DeploySearch",
       "space b d": "pane::CloseActiveItem",
       "space R": "editor::RevealInFileManager",
+      "space f": "file_finder::Toggle",
+      "space b": "tab_switcher::ToggleAll",
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
