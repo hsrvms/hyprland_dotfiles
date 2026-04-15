@@ -90,7 +90,8 @@
 		"experimental.show": true,
 	},
 	"project_panel": {
-		"hide_gitignore": true,
+		"hide_hidden": false,
+  "hide_gitignore": false,
 		"dock": "right",
 		"default_width": 400,
 		"hide_root": false,
@@ -114,7 +115,7 @@
 		},
 	},
 	"file_finder": {
-		"modal_max_width": "medium",
+		"modal_max_width": "small",
 		"include_channels": true,
 	},
 	"scrollbar": {

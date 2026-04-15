@@ -1,5 +1,6 @@
 
-theme = "catppuccin_transparent"
+theme = "catppuccin_mocha"
+# theme = "catppuccin_transparent"
 # theme = "onedark_transparent"
 
 [editor]
