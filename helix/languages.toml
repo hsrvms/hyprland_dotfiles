@@ -1,11 +1,7 @@
 [[language]]
-name = "jsonc"
-language-servers = ["vscode-json-language-server"]
-formatter = { command = "prettier", args = ["--parser", "json"] }
-
-[[language]]
 name = "go"
 auto-format = true
+language-servers = ["gopls"]
 
 [[language]]
 name = "templ"
@@ -15,6 +11,23 @@ file-types = ["templ"]
 roots = ["go.mod"]
 language-servers = ["templ", "gopls"]
 
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = ["typescript-language-server"]
+
+[[language]]
+name = "json"
+auto-format = true
+language-servers = ["vscode-json-language-server"]
+
 [language-server.templ]
 command = "templ"
 args = ["lsp"]
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
