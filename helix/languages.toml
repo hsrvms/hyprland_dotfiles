@@ -1,5 +1,20 @@
-
 [[language]]
 name = "jsonc"
-language-servers = [ "vscode-json-language-server" ]
-formatter = { command = "prettier", args = [ "--parser", "json" ] }
+language-servers = ["vscode-json-language-server"]
+formatter = { command = "prettier", args = ["--parser", "json"] }
+
+[[language]]
+name = "go"
+auto-format = true
+
+[[language]]
+name = "templ"
+scope = "source.templ"
+injection-regex = "templ"
+file-types = ["templ"]
+roots = ["go.mod"]
+language-servers = ["templ", "gopls"]
+
+[language-server.templ]
+command = "templ"
+args = ["lsp"]
