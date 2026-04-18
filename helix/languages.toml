@@ -33,6 +33,12 @@ scope = "source.cs"
 roots = ["*.sln", "*.csproj"]
 language-servers = ["omnisharp"]
 
+[[language]]
+name = "python"
+language-servers = ["ruff", "pyright"]
+formatter = { command = "ruff", args = ["format", "-"] }
+auto-format = true
+
 [language-server.templ]
 command = "templ"
 args = ["lsp"]
@@ -47,3 +53,11 @@ args = ["--stdio"]
 [language-server.omnisharp]
 command = "OmniSharp"
 args = ["--languageserver", "--hostPID", "0"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]

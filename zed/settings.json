@@ -1,29 +1,25 @@
 {
 	"ssh_connections": [
-  {
-   "host": "cs.laughing-space-eureka-grw7j5pv9j43pwvq.main",
-   "args": [],
-   "projects": [
-    {
-     "paths": [
-      "/workspace/development/frappe-bench/apps/cargo/./"
-     ]
-    }
-   ],
-   "nickname": "Barket Salah"
-  },
-  {
-   "host": "cs.refactored-disco-xpqv7947rxq2v5.cs-culinary",
-   "args": [],
-   "projects": [
-    {
-     "paths": [
-      "/workspace/development/frappe-bench/apps/marketplace"
-     ]
-    }
-   ]
-  }
- ],
+		{
+			"host": "cs.laughing-space-eureka-grw7j5pv9j43pwvq.main",
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/workspace/development/frappe-bench/apps/cargo/./"],
+				},
+			],
+			"nickname": "Barket Salah",
+		},
+		{
+			"host": "cs.refactored-disco-xpqv7947rxq2v5.cs-culinary",
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/workspace/development/frappe-bench/apps/marketplace"],
+				},
+			],
+		},
+	],
 	"session": {
 		"trust_all_worktrees": true,
 	},
@@ -91,7 +87,7 @@
 	},
 	"project_panel": {
 		"hide_hidden": false,
-  "hide_gitignore": false,
+		"hide_gitignore": false,
 		"dock": "right",
 		"default_width": 400,
 		"hide_root": false,
@@ -162,7 +158,7 @@
 	"auto_install_extensions": {
 		"html": true,
 	},
-	"show_completions_on_input": false,
+	"show_completions_on_input": true,
 	"inline_code_actions": false,
 	// "autosave": {
 	//     "after_delay": {
