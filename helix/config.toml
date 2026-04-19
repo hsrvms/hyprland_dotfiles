@@ -1,6 +1,6 @@
-
-theme = "catppuccin_mocha"
+# theme = "catppuccin_mocha"
 # theme = "catppuccin_transparent"
+theme = "everblush_transparent"
 # theme = "onedark_transparent"
 
 [editor]
@@ -17,6 +17,12 @@ scrolloff = 10
 end-of-line-diagnostics = "hint"
 idle-timeout = 50
 completion-timeout = 50
+continue-comments = false
+auto-info = true
+
+[editor.lsp]
+auto-signature-help = false
+display-inlay-hints = true
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
@@ -33,55 +39,69 @@ git-ignore = false
 
 [editor.indent-guides]
 render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "╎"  # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-wrap = 25  # increase value to reduce forced mid-word wrapping
 max-indent-retain = 0
 # wrap-indicator = ""  # set wrap-indicator to "" to hide it
-
 
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"]
-C-c = ["collapse_selection", "keep_primary_selection"]
-C-h = "jump_view_left"
-C-j = "jump_view_down"
-C-k = "jump_view_up"
-C-l = "jump_view_right"
-S-l = "goto_next_buffer"
-S-h = "goto_previous_buffer"
+"esc" = ["collapse_selection", "keep_primary_selection"]
+"ret" = ["open_below", "normal_mode"]
+"C-c" = ["collapse_selection", "keep_primary_selection"]
+"C-s" = ":w"
+# "C-o" = ":open ~/.config/helix/config.toml"
+"C-h" = "jump_view_left"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
+"C-l" = "jump_view_right"
+"S-l" = "goto_next_buffer"
+"S-h" = "goto_previous_buffer"
 "{" = ["goto_prev_paragraph"]
 "}" = ["goto_next_paragraph"]
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
-C-e = [
-  ':sh rm -f /tmp/unique-file',
-  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+"K" = "hover"
+"C-g" = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+"C-e" = [
+  ":sh rm -f /tmp/unique-file",
+  ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file",
   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-  ':open %sh{cat /tmp/unique-file}',
-  ':redraw',
+  ":open %sh{cat /tmp/unique-file}",
+  ":redraw",
 ]
 "C-/" = "toggle_comments"
 
-[keys.insert]
-C-c = "normal_mode"
-
 [keys.normal.space]
-f = "file_picker_in_current_directory"
-F = "file_picker"
+"f" = "file_picker_in_current_directory"
+"F" = "file_picker"
 # a = "code_action"
 
+[keys.normal.space.c]
+"f" = ":fmt"
+
+[keys.insert]
+"C-c" = "normal_mode"
+"C-/" = "toggle_comments"
 
 [keys.select]
 "{" = ["goto_prev_paragraph"]
 "}" = ["goto_next_paragraph"]
+"C-/" = "toggle_comments"
