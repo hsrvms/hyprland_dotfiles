@@ -1,0 +1,9 @@
+inherits = "gruvbox_dark_hard"
+# inherits = "everforest_dark"
+"ui.background" = {}
+
+"ui.menu" = { bg = "none" }
+"ui.popup" = { bg = "none" }
+
+"ui.menu.selected" = { modifiers = ["reversed"] }
+"ui.popup.info" = { bg = "none", fg = "text" }
