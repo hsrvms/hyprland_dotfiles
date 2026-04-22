@@ -54,3 +54,8 @@ swayidle -w \
 chmod +x ~/.config/mango/scripts/idle.sh
 spawn ~/.config/mango/scripts/idle.sh # add it into autostart section
 ```
+
+# Desktop Aplication Bridge for Auth
+```bash
+sudo pacman -S xdg-desktop-portal xdg-desktop-portal-gtk
+```
