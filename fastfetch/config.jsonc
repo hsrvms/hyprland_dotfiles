@@ -62,6 +62,11 @@
       "key": "  Term",
       "keyColor": "blue"
     },
+    {
+        "type": "terminalfont",
+        "key": "  Font",
+        "keyColor": "blue"
+    },
     "break",
     {
       "type": "cpu",

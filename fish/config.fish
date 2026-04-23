@@ -13,3 +13,5 @@ abbr -a dc devcontainer
 
 alias hx helix
 # alias zed zeditor
+
+alias qutebrowser="env QT_QPA_PLATFORM=xcb qutebrowser"

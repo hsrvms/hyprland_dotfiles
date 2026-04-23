@@ -1,0 +1,95 @@
+configuration {
+    /* Match the font from your foot terminal and qutebrowser */
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: false;
+}
+
+* {
+    /* Deep Charcoal Palette */
+    bg:         #161616;
+    bg-alt:     #1e1e1e;
+    bg-sel:     #3a3a3a;
+    fg:         #aaaaaa;
+    fg-active:  #ffffff;
+    accent:     #ffaa00;
+
+    /* Global defaults */
+    background-color: transparent;
+    text-color:       @fg;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+}
+
+window {
+    background-color: @bg;
+    border:           1px solid;
+    border-color:     @bg-sel;
+    border-radius:    8px;
+    width:            450px;
+    padding:          15px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    6px;
+    padding:          12px;
+    margin:           0 0 10px 0;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color:       @accent;
+    margin:           0 10px 0 0;
+    font:             "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    text-color:       @fg-active;
+    placeholder-color:@fg;
+}
+
+listview {
+    lines:            5;
+    scrollbar:        false;
+}
+
+element {
+    padding:          10px;
+    border-radius:    6px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @bg-sel;
+    text-color:       @fg-active;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element-text {
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+message {
+    /* Uses the slightly lighter background color from our palette */
+    background-color: @bg-alt;
+    border:           1px solid;
+    border-color:     @bg-sel;
+    border-radius:    6px;
+    padding:          10px;
+    margin:           0 0 10px 0;
+}
+
+textbox {
+    /* Rofi will use this for plain text, but the blue Pango markup will still override it */
+    text-color:       @fg;
+}
