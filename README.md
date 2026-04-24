@@ -59,3 +59,6 @@ spawn ~/.config/mango/scripts/idle.sh # add it into autostart section
 ```bash
 sudo pacman -S xdg-desktop-portal xdg-desktop-portal-gtk
 ```
+
+# Cisco Packet Tracer Arch Installer
+https://aur.archlinux.org/packages/packettracer
