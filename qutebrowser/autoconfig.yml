@@ -9,7 +9,10 @@ settings:
   content.desktop_capture:
     https://meet.google.com: true
   content.javascript.clipboard:
+    https://docs.noctalia.dev: access-paste
+    https://erp.ccculinary.de: access-paste
     https://gemini.google.com: access-paste
+    https://github.com: access-paste
   content.media.audio_capture:
     https://meet.google.com: true
   content.notifications.enabled:
