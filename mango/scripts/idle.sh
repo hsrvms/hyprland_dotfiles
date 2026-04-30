@@ -4,7 +4,7 @@
 killall swayidle 2>/dev/null
 
 swayidle -w \
-    timeout 240 'brightnessctl -s set 10%' resume 'brightnessctl -r' \
-    timeout 300 'qs -c noctalia-shell ipc call lockScreen lock' \
-    timeout 600 'systemctl suspend' \
+    timeout 1800 'brightnessctl -s set 10%' resume 'brightnessctl -r' \
+    timeout 1860 'qs -c noctalia-shell ipc call lockScreen lock' \
+    timeout 1920 'systemctl suspend' \
     before-sleep 'qs -c noctalia-shell ipc call lockScreen lock' &
