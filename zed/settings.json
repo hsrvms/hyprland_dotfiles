@@ -1,5 +1,12 @@
 {
-	"ssh_connections": [
+	"cli_default_open_behavior": "new_window",
+ "collaboration_panel": {
+  "dock": "left"
+ },
+ "git_panel": {
+  "dock": "left"
+ },
+ "ssh_connections": [
 		{
 			"host": "cs.laughing-space-eureka-grw7j5pv9j43pwvq.main",
 			"args": [],
@@ -39,23 +46,23 @@
 		"dark": "Catppuccin Mocha",
 	},
 	"theme_overrides": {
-		"Catppuccin Moch": {
-			"background.appearance": "transparent",
-			"background": "#00000095",
-			"editor.background": "#1e1e2e95",
-			"terminal.background": "#1e1e2e95",
-			"editor.foreground": "#1e1e2e95",
-			"editor.gutter.background": "#1e1e2e95",
-			"panel.background": "#18182595",
-			"element.background": "#00000090",
+		"Catppuccin Mocha (Blur) [Heavy]": {
+			// "background.appearance": "transparent",
+			// "background": "#00000095",
+			// "editor.background": "#1e1e2e95",
+			// "terminal.background": "#1e1e2e95",
+			// "editor.foreground": "#1e1e2e95",
+			// "editor.gutter.background": "#1e1e2e95",
+			// "panel.background": "#18182595",
+			// "element.background": "#00000090",
 			"tab_bar.background": "#11111b95",
 			"tab.inactive_background": "#00000000",
-			"tab.active_background": "#1e1e2ecc",
+			// "tab.active_background": "#1e1e2eff",
 			"border.variant": "#464b57ff",
-			"border.transparent": "#00000000",
-			"border.focused": "#47679eff",
-			"status_bar.background": "#18182595",
-			"modified.background": "#00000095",
+			// "border.transparent": "#00000000",
+			// "border.focused": "#47679eff",
+			// "status_bar.background": "#18182595",
+			// "modified.background": "#00000095",
 
 			"syntax": {
 				"comment": {
@@ -105,7 +112,8 @@
 		},
 	},
 	"outline_panel": {
-		"default_width": 300,
+		"dock": "left",
+  "default_width": 300,
 		"indent_guides": {
 			"show": "never",
 		},
@@ -165,7 +173,7 @@
 	//         "milliseconds": 1000,
 	//     },
 	// },
-	"auto_update": false,
+	"auto_update": true,
 	"extend_comment_on_newline": false,
 	"vertical_scroll_margin": 8,
 	"horizontal_scroll_margin": 10,
@@ -190,7 +198,8 @@
 		"mode": "subtle",
 	},
 	"agent": {
-		"default_profile": "ask",
+		"dock": "right",
+  "default_profile": "ask",
 		"default_model": {
 			"enable_thinking": true,
 			"provider": "openrouter",

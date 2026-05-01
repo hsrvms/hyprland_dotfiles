@@ -13,7 +13,7 @@ set smoothscroll true
 " Set your preferred external editor (triggered via <C-i> in text fields)
 " This spawns a new foot window running Neovim
 " set editorcmd foot -e "vim %f '+normal %lG%c|'"
-" set editorcmd foot -e "zed %f '+normal %lG%c|'"
+set editorcmd zed -n --wait %f
 
 " --- Keybindings ---
 " Tab navigation that aligns with standard Vim behavior
@@ -25,9 +25,11 @@ unbind J
 unbind K
 bind gT tabprev
 bind gt tabnext
+unbind <C-f>
+
 
 " Quickly toggle Ignore Mode (useful for Codespaces, ERPNext desk, etc.)
-bind <C-z> mode ignore
+bind --mode=ignore <C-z> mode normal
 
 " --- Custom Search Engines ---
 " Format: set searchurls.[keyword] [URL]
